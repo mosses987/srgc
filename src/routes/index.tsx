@@ -390,17 +390,17 @@ function Contact() {
         <form onSubmit={onSubmit} noValidate className="reveal rounded-sm bg-card p-7 shadow-elegant md:p-10">
           <h3 className="text-2xl font-bold text-navy">Request a Quote</h3>
           <div className="mt-6 grid gap-5 sm:grid-cols-2">
-            <Field label="Name" name="name" error={errors.name}><input id="name" name="name" autoComplete="name" className={field} /></Field>
-            <Field label="Email" name="email" error={errors.email}><input id="email" name="email" type="email" autoComplete="email" className={field} /></Field>
-            <Field label="Phone" name="phone" error={errors.phone}><input id="phone" name="phone" type="tel" autoComplete="tel" className={field} /></Field>
-            <Field label="Service Required" name="service" error={errors.service}>
+            <Field label="Name" name="name" error={errors["name"]}><input id="name" name="name" autoComplete="name" className={field} /></Field>
+            <Field label="Email" name="email" error={errors["email"]}><input id="email" name="email" type="email" autoComplete="email" className={field} /></Field>
+            <Field label="Phone" name="phone" error={errors["phone"]}><input id="phone" name="phone" type="tel" autoComplete="tel" className={field} /></Field>
+            <Field label="Service Required" name="service" error={errors["service"]}>
               <select id="service" name="service" defaultValue="" className={field}>
                 <option value="" disabled>Select a service</option>
                 {["Stucco", "EIFS", "Siding", "Drywall", "Multiple / Not sure"].map((s) => <option key={s}>{s}</option>)}
               </select>
             </Field>
             <div className="sm:col-span-2">
-              <Field label="Message" name="message" error={errors.message}><textarea id="message" name="message" rows={5} className={field} /></Field>
+              <Field label="Message" name="message" error={errors["message"]}><textarea id="message" name="message" rows={5} className={field} /></Field>
             </div>
           </div>
           <button type="submit" className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-sm bg-primary px-6 py-4 font-bold text-primary-foreground shadow-elegant transition hover:-translate-y-0.5 hover:bg-navy">
@@ -413,7 +413,7 @@ function Contact() {
   );
 }
 
-function Field({ label, name, error, children }: { label: string; name: string; error?: string; children: ReactNode }) {
+function Field({ label, name, error, children }: { label: string; name: string; error?: string | undefined; children: ReactNode }) {
   return (
     <div>
       <label htmlFor={name} className="text-sm font-semibold text-navy">{label}</label>
