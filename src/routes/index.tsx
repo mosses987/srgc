@@ -289,7 +289,7 @@ function Sectors() {
 
 function WhyUs() {
   const reasons = [
-    ["Commercial and residential contracting", "Experience-ready crews for both property types."],
+    ["Commercial and residential contracting", "Contracting services for both property types."],
     ["Multiple specialized services", "Stucco, EIFS, siding and drywall under one contractor."],
     ["Quality-focused workmanship", "Every finish is held to a careful, consistent standard."],
     ["Serving clients across Ontario", "Reliable service for projects throughout the province."],
