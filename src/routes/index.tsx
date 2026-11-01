@@ -112,7 +112,7 @@ function Header() {
   }, []);
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b bg-card/95 backdrop-blur transition-shadow ${scrolled ? "shadow-elegant" : "border-transparent"}`}
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-card transition-shadow ${scrolled ? "shadow-elegant" : "border-transparent"}`}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
         <a href="#top" className="flex h-full items-center" aria-label="SRGC Developments Ltd — home">
